@@ -284,7 +284,7 @@ h1:hover{
     height: 250px;
     width: 250px;
     margin-top: 180px;
-    margin-left: -240px;
+    margin-left: -260px;
     position: absolute;
 }
 
@@ -312,7 +312,7 @@ h1:hover{
     /* margin: 5px 10px 10px 80px ; */
     text-align: center;
     margin-bottom: 15px;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .service-items p {
