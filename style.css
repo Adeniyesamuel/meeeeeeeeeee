@@ -174,7 +174,7 @@ h1:hover{
     padding: 0px 20px 20px 20px;
 }
 .service-container h3{
-    margin: 5px 30px 10px 80px ;
+    margin: 5px 10px 10px 80px ;
 }
 
 .service-items p {
@@ -184,8 +184,8 @@ h1:hover{
 }
 
 .service-items img{
-    height: 30px;
-    width: 30px;
+    height: 40px;
+    width: 40px;
     position: relative;
     top: 50px;
     left: 15px;
