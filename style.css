@@ -10,10 +10,67 @@ body{
     box-sizing: border-box;
 }
 
+
+:root{
+    --background-color:  #f2f3f7 ;
+    --secondary-color: crimson;
+    --text-color: black;
+    --secondary-text: gray;
+    --primary-text:black;
+    --hover:black;
+}
+
+.darkmode{
+    --background-color:  #111 ;
+    --secondary-color: crimson;
+    --text-color: white;
+    --secondary-text: gray;
+    --primary-text:white;
+    --hover:#f2f3f7;
+}
+
+#theme-switch{
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    background-color: var(--primary-text);
+    border-radius: 50%;
+    margin-right: 50px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#theme-switch i{
+    font-size: 20px;
+    color: var(--secondary-color);
+}
+
+#theme-switch i:last-child{
+    display: none;
+}
+
+.darkmode #theme-switch i:first-child{
+    display: none;
+}
+
+.darkmode #theme-switch i:last-child{
+    display: block;
+}
+
+
+
+
 .main-container{
     width: 100%;
     height: 100vh;
-    background-color: #f2f3f7;
+    background-color: var(--background-color);
 }
 
 #check{display: none;}
@@ -26,7 +83,7 @@ body{
     cursor: pointer;
     font-size: 1.5rem;
     display: none;
-    color: #000;
+    color: var(--text-color);
 }
 
 .close{
@@ -41,10 +98,10 @@ body{
 
 a{
     text-decoration: none;
-    color: crimson;
+    color: var(--secondary-color);
 }
 a:hover{
-    color:#000;
+    color:var(--hover);
     transition: .3s ease-in;   
 }
 
@@ -79,12 +136,12 @@ nav{
 }
 
 h1{
-    color: gray;
+    color: var(--secondary-text);
     font-size: 30px;
 }
 
 h1 span{
-    color: crimson;
+    color: var(--secondary-color);
 }
 
 h1:hover{
@@ -101,7 +158,7 @@ h3:hover{
 .hero-section{
     width: 100%;
     height: 100vh;
-    background-color: #f3f4f8;
+    background-color: var(--background-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -115,12 +172,12 @@ h3:hover{
 
 .hero-section .texts .hi{
     font-size: 20px;
-    color: crimson;
+    color: var(--secondary-color);
     margin-bottom: 10px;
 }
 
 .hero-section .texts h1{
-    color: #000;
+    color: var(--primary-text);
     font-size: 40px;
     margin-bottom: 10px;
 }
@@ -129,18 +186,19 @@ h3:hover{
     font-size: 28px;
     font-weight: 100;
     margin-bottom: 10px;
+    color: var(--primary-text);
 }
 
 .hero-section .texts .description{
     font-size: 21px;
     margin-bottom:10px;
-    color: #706e73;
+    color: var(--secondary-text);
 }
 
 .hero-section .texts button{
     width: 100px;
     height: 30px;
-    background-color: crimson;
+    background-color: var(--secondary-color);
     border: none;
     outline: 0;
     color: #f3f4f8;
@@ -155,11 +213,15 @@ h3:hover{
 
 .sam{
     text-align: center;
-    background-color: #f2f3f7;
+    background-color: var(--background-color);
+}
+
+.sam h3{
+    color: var(--primary-text);
 }
 
 .service-container{
-    background-color: #f2f3f7 ;
+    background-color: var(--background-color) ;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
@@ -310,6 +372,29 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #ede9e9;
 }
 
+.whatsapp-float{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 30px;
+
+}
+
+.whatsapp-float:hover{
+    background-color: #25d3658f;
+    color: #000;
+}
+
+
 
 footer{
     background: rgb(85, 84, 84);
@@ -407,12 +492,15 @@ footer ul li a:hover{
 .open{display: block;}
 .close{display: block;}
 
+#theme-switch{
+    margin-left: 15px;
+}
+
 #check:checked ~ .nav-wrapper{right: 0;}
 
 .hero-section{
     max-width: 100%;
     height: 100vh;
-    background-color: #f3f4f8;
     display: flex;
     align-items: center;  
     margin-top: -150px;  
@@ -430,7 +518,7 @@ footer ul li a:hover{
 }
 
 .hero-section .texts h1{
-    color: #000;
+    color: var(--primary-text);
     font-size: 25px;
     margin-bottom: 10px;
 }
@@ -467,8 +555,12 @@ footer ul li a:hover{
     position: absolute;
 }
 
+.sam{
+    margin-top: -2px;
+}
+
 .service-container{
-    background-color: #f2f3f7 ;
+    /* background-color: #f2f3f7 ; */
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 40px;
@@ -476,6 +568,7 @@ footer ul li a:hover{
     padding: 30px;
     align-content: center;
     justify-items: center;
+    margin-top: -2px;
 }
 
 .service-items{
